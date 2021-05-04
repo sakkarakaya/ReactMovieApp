@@ -6,7 +6,7 @@ import CardList from './components/CardList'
 import Searchbox from './components/Searchbox'
 
 const baseUrl = "https://api.themoviedb.org/3/search/movie"
-const apiKey = "8027a6a53073204b50661589f3f65c0f"
+const apiKey = ""
 const baseImageUrl = "https://image.tmdb.org/t/p/w500"
 
 function App() {

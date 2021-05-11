@@ -11,7 +11,6 @@ const baseImageUrl = "https://image.tmdb.org/t/p/w500"
 
 const alphabet = "abcdefghijklmnopqrstuvwxyz"
 const randomCharacter = alphabet[Math.floor(Math.random() * alphabet.length)]
-console.log(randomCharacter)
 
 function App() {
   const [movies, setMovies] = useState([])

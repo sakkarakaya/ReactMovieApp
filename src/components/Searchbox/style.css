@@ -1,3 +1,15 @@
 .searchbox{
     margin: 2rem;
 }
+
+button{
+    margin-left: 0.5rem;
+    border-radius: 5px;
+    height: 2rem;
+    cursor: pointer;
+}
+
+input{
+    height: 1.7rem;
+    border-radius: 5px;
+}

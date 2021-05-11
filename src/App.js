@@ -9,9 +9,13 @@ const baseUrl = "https://api.themoviedb.org/3/search/movie"
 const apiKey = "8027a6a53073204b50661589f3f65c0f"
 const baseImageUrl = "https://image.tmdb.org/t/p/w500"
 
+const alphabet = "abcdefghijklmnopqrstuvwxyz"
+const randomCharacter = alphabet[Math.floor(Math.random() * alphabet.length)]
+console.log(randomCharacter)
+
 function App() {
   const [movies, setMovies] = useState([])
-  const [searchText, setSearchText] = useState("a")
+  const [searchText, setSearchText] = useState(randomCharacter)
   useEffect(() => {
     axios.get(baseUrl, {
       params: {

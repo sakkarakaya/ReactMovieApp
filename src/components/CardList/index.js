@@ -3,8 +3,6 @@ import React from 'react'
 import Card from '../Card'
 import './style.css'
 
-
-
 const CardList = ({ movies, baseImageUrl }) => {
 
     return (

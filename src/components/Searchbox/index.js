@@ -1,7 +1,8 @@
-import React, { useRef } from 'react'
+import React, { useRef, useContext } from 'react'
+import {MovieContext} from '../../context/MovieContext'
 import './style.css'
 
-const Searchbox = ({setSearchText}) => {
+const Searchbox = () => {
     // const [inputText, setInputText] = useState("")
     const inputRef = useRef()
     
@@ -9,6 +10,8 @@ const Searchbox = ({setSearchText}) => {
     //     setInputText(v) 
     //  }
     
+    const {setSearchText} = useContext(MovieContext)
+
     return (
 
         <div className="searchbox">

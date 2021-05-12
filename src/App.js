@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import { MovieContext } from './context/MovieContext'
 import './App.css';
 
 import CardList from './components/CardList'
@@ -15,6 +16,7 @@ const randomCharacter = alphabet[Math.floor(Math.random() * alphabet.length)]
 function App() {
   const [movies, setMovies] = useState([])
   const [searchText, setSearchText] = useState(randomCharacter)
+  
   useEffect(() => {
     axios.get(baseUrl, {
       params: {
@@ -25,12 +27,23 @@ function App() {
     }).then(res => setMovies(res.data.results))
       .catch(err => console.log(err))
   }, [searchText])
+
+  // useContext
   return (
     <div className="App">
-      <Searchbox setSearchText={setSearchText}/>
-      <CardList movies={movies} baseImageUrl={baseImageUrl} />
+      <MovieContext.Provider value={{ movies, baseImageUrl, setSearchText}}>
+        <Searchbox/>
+        <CardList/>
+      </MovieContext.Provider>
     </div>
   );
+
+  // return (
+  //   <div className="App">
+  //     <Searchbox setSearchText={setSearchText}/>
+  //     <CardList movies={movies} baseImageUrl={baseImageUrl} />
+  //   </div>
+  // );
 }
 
 export default App;

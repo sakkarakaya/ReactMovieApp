@@ -1,5 +1,6 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
+import './index.css'
 
 const Detail = () => {
     const data = useLocation();

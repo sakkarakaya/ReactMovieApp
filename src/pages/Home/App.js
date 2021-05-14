@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { MovieContext } from './context/MovieContext'
 import './App.css';
 
-import CardList from './components/CardList'
-import Searchbox from './components/Searchbox'
+import { MovieContext } from '../../context/MovieContext'
+import CardList from '../../components/CardList'
+import Searchbox from '../../components/Searchbox'
 
 const baseUrl = "https://api.themoviedb.org/3/search/movie"
 const apiKey = "8027a6a53073204b50661589f3f65c0f"

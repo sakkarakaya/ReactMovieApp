@@ -9,7 +9,11 @@ const Card = ({ baseImageUrl, data }) => {
             pathname: "/detail/" + data.id,
             state: data
           })}}>
-            <img src={baseImageUrl + data.poster_path} alt="img" />
+            {
+                data.poster_path ?
+                <img src={baseImageUrl + data.poster_path} alt="img" /> :
+                <img src="https://via.placeholder.com/70x113.png?text=No+Image" alt="img" />
+            }
             <p>{data.original_title}</p>
         </div>
     )
